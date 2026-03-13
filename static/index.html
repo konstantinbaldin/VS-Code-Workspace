@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Calculator</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="card">
+      <h1>Calculator</h1>
+      <p class="subtitle">FastAPI + JSON API</p>
+
+      <form id="calc-form" class="calc-form">
+        <div class="field-grid">
+          <label>
+            <span>First number</span>
+            <input id="a" name="a" type="number" step="any" placeholder="e.g. 12.5" required />
+          </label>
+
+          <label>
+            <span>Operator</span>
+            <select id="op" name="op" required>
+              <option value="+">+</option>
+              <option value="-">−</option>
+              <option value="*">×</option>
+              <option value="/">÷</option>
+            </select>
+          </label>
+
+          <label>
+            <span>Second number</span>
+            <input id="b" name="b" type="number" step="any" placeholder="e.g. 3" required />
+          </label>
+        </div>
+
+        <button type="submit">Calculate</button>
+      </form>
+
+      <section class="result" aria-live="polite">
+        <h2>Result</h2>
+        <pre id="output">Waiting for input…</pre>
+      </section>
+    </section>
+  </main>
+
+  <script src="/static/app.js" defer></script>
+</body>
+</html>

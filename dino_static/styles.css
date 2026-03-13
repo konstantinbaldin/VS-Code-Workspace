@@ -1,0 +1,123 @@
+:root {
+  color-scheme: dark;
+  --bg: #081124;
+  --card: #101b33;
+  --border: #293b61;
+  --text: #eaf0ff;
+  --muted: #adc0eb;
+  --accent: #73b5ff;
+  --accent-strong: #4d97f2;
+  --ok: #71e7ad;
+  --warn: #ff9e9e;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, "Segoe UI", Roboto, sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top, #112145, var(--bg));
+}
+
+.shell {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 1.2rem;
+}
+
+.card {
+  width: min(980px, 100%);
+  background: color-mix(in oklab, var(--card) 90%, black 10%);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 1.2rem;
+}
+
+h1, h2 { margin: 0 0 0.65rem; }
+
+.subtitle {
+  margin: 0 0 1rem;
+  color: var(--muted);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.form {
+  display: grid;
+  gap: 0.8rem;
+}
+
+label {
+  display: grid;
+  gap: 0.35rem;
+}
+
+label span {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+select,
+textarea,
+button {
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #0b142a;
+  color: var(--text);
+  padding: 0.65rem 0.75rem;
+  font-size: 0.97rem;
+}
+
+button {
+  border: none;
+  background: linear-gradient(180deg, var(--accent), var(--accent-strong));
+  color: #081124;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.records {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.record {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.75rem;
+  background: #0a1225;
+}
+
+.row {
+  display: flex;
+  gap: 0.4rem;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.badge {
+  padding: 0.14rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
+
+.present { background: color-mix(in oklab, var(--ok) 25%, transparent); color: var(--ok); }
+.absent { background: color-mix(in oklab, var(--warn) 25%, transparent); color: var(--warn); }
+
+.meta {
+  margin-top: 0.4rem;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.note {
+  margin-top: 0.5rem;
+  white-space: pre-wrap;
+}

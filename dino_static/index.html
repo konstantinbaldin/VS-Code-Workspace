@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dino - Atividades da Semana</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <section class="card">
+      <h1>Dino App</h1>
+      <p id="week-meta" class="subtitle">Carregando semana...</p>
+
+      <div class="layout">
+        <section>
+          <h2>Registrar atividade</h2>
+          <form id="record-form" class="form">
+            <label>
+              <span>Atividade</span>
+              <select id="activity" required></select>
+            </label>
+
+            <label>
+              <span>Status</span>
+              <select id="status" required>
+                <option value="present">Participou</option>
+                <option value="absent">Faltou</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Humor</span>
+              <select id="mood" required>
+                <option value="feliz">Feliz</option>
+                <option value="normal" selected>Normal</option>
+                <option value="cansado">Cansado</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Observações</span>
+              <textarea id="note" rows="3" placeholder="Como foi a atividade?"></textarea>
+            </label>
+
+            <button type="submit">Salvar registro</button>
+          </form>
+        </section>
+
+        <section>
+          <h2>Resumo semanal</h2>
+          <div id="records" class="records"></div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <script src="/static/app.js" defer></script>
+</body>
+</html>
