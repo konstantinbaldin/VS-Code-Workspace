@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f7f9;
+  color: #1f2328;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 16px;
+}
+
+.panel {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.form-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.form-row input {
+  flex: 1;
+  padding: 8px;
+}
+
+.form-row button,
+.album-card button {
+  padding: 8px 10px;
+}
+
+.status {
+  min-height: 20px;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.album-group {
+  margin-bottom: 16px;
+}
+
+.album-group-list {
+  display: grid;
+  gap: 8px;
+}
+
+.album-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 8px;
+  background: #fff;
+}
+
+.album-card.active {
+  border-color: #2f6feb;
+}
+
+.album-open {
+  background: transparent;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.album-card-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+}
+
+.photo-tile {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.photo-tile img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  display: block;
+  background: #efefef;
+}
+
+.photo-tile footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+  padding: 6px;
+  font-size: 12px;
+}
+
+.photo-tile.broken img {
+  opacity: 0.35;
+}
+
+.empty {
+  color: #666;
+}
+
+@media (max-width: 960px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}

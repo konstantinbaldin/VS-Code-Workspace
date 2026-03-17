@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Album Organizer</title>
+    <link rel="stylesheet" href="/src/styles/app.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <section class="panel">
+        <h1>Photo Album Organizer</h1>
+
+        <form id="album-form" class="form-row">
+          <input id="album-title" name="title" type="text" placeholder="Album title" required />
+          <input id="album-date" name="groupDate" type="date" required />
+          <button type="submit">Create Album</button>
+        </form>
+
+        <div id="album-status" class="status" aria-live="polite"></div>
+
+        <div id="album-groups" class="album-groups"></div>
+      </section>
+
+      <section class="panel">
+        <h2 id="album-details-title">Album Photos</h2>
+
+        <form id="photo-form" class="form-row">
+          <input id="photo-file-path" name="filePath" type="text" placeholder="Local image path" />
+          <button type="submit">Add Photo Metadata</button>
+        </form>
+
+        <div id="photo-status" class="status" aria-live="polite"></div>
+        <div id="photo-grid" class="photo-grid"></div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

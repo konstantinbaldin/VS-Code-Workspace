@@ -1,0 +1,19 @@
+{
+  "name": "photo-album-backend",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node src/server.js",
+    "start": "node src/server.js",
+    "test": "node --test tests/**/*.test.js",
+    "seed": "node src/db/seed.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "supertest": "^7.1.0"
+  }
+}
